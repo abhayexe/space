@@ -1,0 +1,267 @@
+@font-face {
+  font-family: 'SF Distant Galaxy';
+  src: local('SF Distant Galaxy'), url(fonts/SF\ Distant\ Galaxy.ttf), format('ttf');
+}
+@import 'https://fonts.googleapis.com/css?family=Bungee'; 
+
+body {
+  background: #2a2d2e;
+  margin: 0;
+  font-family: 'SF Distant Galaxy';
+  /* cursor: none; */
+  /* cursor: url('cursor.png') 12 12, auto; */
+
+}
+
+#heading {
+  position: fixed;
+  padding: 10px;
+  right: 10px;
+}
+#heading img{
+  height: 100px;
+  /* filter: drop-shadow(0 0 2px rgb(2, 7, 7)); */
+}
+
+.border {
+  background: #ffe76f;
+  background: linear-gradient(90deg, rgb(81, 142, 211), 90%, rgb(0, 9, 9));
+  height: 2px;
+  width: 80vw;
+  margin-top: 4px;
+}
+
+h1 {
+  color: rgb(16, 68, 199);
+  text-shadow: 2px 2px #ff0000;  font-size: 4em;
+  margin: 0px;
+  font-weight: 100;
+  transition: 0.5s;
+}
+
+h1:hover{
+  color: rgb(254, 0, 0);
+  text-shadow: 2px 2px rgb(16, 68, 199);
+}
+
+h2 {
+  color: #ff0000;
+  text-shadow: 2px 2px #3700ff;  font-size: 3em;
+  margin: 0px;
+  font-weight: 100;
+  transition: 0.5s;
+}
+
+h2:hover{
+  color: rgb(42, 0, 254);
+  text-shadow: 2px 2px rgb(199, 16, 16);  font-size: 3.1em;
+}
+
+/* From Uiverse.io by lukepadiachy */ 
+.my-loader {
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  margin: 100px auto;
+}
+
+.rubiks-cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: my-rotateCube 5s infinite linear;
+}
+
+.my-loader .face {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.my-loader .face.front {
+  transform: translateZ(100px);
+}
+.my-loader .face.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.my-loader .face.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.my-loader .face.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.my-loader .face.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.my-loader .face.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.my-loader .cube {
+  width: calc(100% / 3);
+  height: calc(100% / 3);
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
+@keyframes my-rotateCube {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.headingg{
+  padding: 10px;
+}
+#progress-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+}
+
+#progress {
+  font-size: 3em;
+  color: white;
+}
+
+#glass-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Allow clicks to pass through to the 3D model */
+}
+
+.glass-div {
+  width: 300px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  backdrop-filter: blur(10px); /* Background blur */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+  text-align: center;
+  pointer-events: auto; /* Allows interaction within the div */
+}
+
+h1 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 54px;
+}
+
+p {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* Container for the settings button and dropdown */
+
+
+/* Settings button */
+#settingsButton {
+  padding: 20px 20px;
+  background-color: #a6bddd5c;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  z-index: 2;
+}
+#settingsButton svg{
+  height: 50px;
+  /* transform: scale(0.1); */
+}
+/* Hidden dropdown content */
+.dropdown-content {
+  display: none;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #ffffff;
+  position: absolute;
+  border-radius: 0px 20px 20px 20px;
+  background-color: rgba(0, 29, 34, 0.263);
+  box-shadow: 0px 8px 16px rgba(10, 12, 14, 0.404);
+  backdrop-filter: blur(10px);
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Style individual buttons in the dropdown */
+.dropdown-content button {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: 0.4s;
+  border-radius: 20px;
+
+
+}
+
+.dropdown-content button:hover {
+  background-color: #ddd;
+  color: black;
+  /* border-radius: 0px; */
+}
+
+/* Show the dropdown when clicked */
+.show {
+  display: block;
+}
+
+.settings {
+  position: absolute;
+  margin: 20px;
+  border-radius: 10px;
+  /* display: inline-block; */
+}
+
+
+
+/* From Uiverse.io by cohencoo */ 
+.custom-loader {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: #F4BF00;
+  border: 2px solid;
+  position: relative;
+  margin: 20px;
+}
+
+.custom-loader::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: #F4BF00;
+  animation: p6 2s infinite;
+}
+
+@keyframes p6 {
+  100% {
+    inset: 0
+  }
+}

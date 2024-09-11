@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>My Black Hole</title>
+
+		<link rel="stylesheet" href="public/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.163.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.163.0/examples/jsm/"
+        }
+      }
+    </script>
+	</head>
+	<body>
+    <div class="settings">
+      <button id="settingsButton"></button>
+      <div id="dropdownMenu" class="dropdown-content">        
+        <button id="spawnTownhallButton">Spawn Galaxy</button>
+        <button id="toggleBloom">Toggle Glow</button>
+        <button id="toggleAutoRotate">Toggle Autorotate</button>
+        <button id="toggleSpotlight1">Glow rings 1</button>
+        <button id="toggleSpotlight2">Glow rings 2</button>
+        <button id="toggleSpotlight3">Glow rings 3</button>
+        <button id="toggleSpotlight4">Cinematic blur</button>
+      </div>
+    </div>
+    
+
+
+    <!-- <div id="heading">
+      <img src="logo.png" alt="logo" draggable="false">
+    </div> -->
+    <div id="glass-container">
+      <!-- <div class="glass-div">
+          <h1>Glass Effect</h1>
+          <p>This is a glass-like div with background blur.</p>
+      </div> -->
+  </div>
+    <div id="progress-container">
+<div class="my-loader">
+  <div class="rubiks-cube">
+    <div class="face front">
+      <div style="background: #ff3d00;" class="cube"></div>
+      <div style="background: #ffeb3b;" class="cube"></div>
+      <div style="background: #4caf50;" class="cube"></div>
+      <div style="background: #2196f3;" class="cube"></div>
+      <div style="background: #ffffff;" class="cube"></div>
+      <div style="background: #ffeb3b;" class="cube"></div>
+      <div style="background: #4caf50;" class="cube"></div>
+      <div style="background: #2196f3;" class="cube"></div>
+      <div style="background: #ff3d00;" class="cube"></div>
+    </div>
+
+    <div class="face back">
+      <div style="background: #4caf50;" class="cube"></div>
+      <div style="background: #ff3d00;" class="cube"></div>
+      <div style="background: #ffeb3b;" class="cube"></div>
+      <div style="background: #2196f3;" class="cube"></div>
+      <div style="background: #ffffff;" class="cube"></div>
+      <div style="background: #ff3d00;" class="cube"></div>
+      <div style="background: #ffeb3b;" class="cube"></div>
+      <div style="background: #4caf50;" class="cube"></div>
+      <div style="background: #2196f3;" class="cube"></div>
+    </div>
+    <div class="face left">
+      <div style="background: #ffeb3b;" class="cube"></div>
+      <div style="background: #4caf50;" class="cube"></div>
+      <div style="background: #2196f3;" class="cube"></div>
+      <div style="background: #ff3d00;" class="cube"></div>
+      <div style="background: #ffffff;" class="cube"></div>
+      <div style="background: #4caf50;" class="cube"></div>
+      <div style="background: #2196f3;" class="cube"></div>
+      <div style="background: #ffeb3b;" class="cube"></div>
+      <div style="background: #ff3d00;" class="cube"></div>
+    </div>
+    <div class="face right">
+      <div style="background: #4caf50;" class="cube"></div>
+      <div style="background: #ff3d00;" class="cube"></div>
+      <div style="background: #ffeb3b;" class="cube"></div>
+      <div style="background: #2196f3;" class="cube"></div>
+      <div style="background: #ffffff;" class="cube"></div>
+      <div style="background: #ff3d00;" class="cube"></div>
+      <div style="background: #ffeb3b;" class="cube"></div>
+      <div style="background: #4caf50;" class="cube"></div>
+      <div style="background: #2196f3;" class="cube"></div>
+    </div>
+    <div class="face top">
+      <div style="background: #2196f3;" class="cube"></div>
+      <div style="background: #ffeb3b;" class="cube"></div>
+      <div style="background: #ff3d00;" class="cube"></div>
+      <div style="background: #4caf50;" class="cube"></div>
+      <div style="background: #ffffff;" class="cube"></div>
+      <div style="background: #ffeb3b;" class="cube"></div>
+      <div style="background: #ff3d00;" class="cube"></div>
+      <div style="background: #4caf50;" class="cube"></div>
+      <div style="background: #2196f3;" class="cube"></div>
+    </div>
+    <div class="face bottom">
+      <div style="background: #ffffff;" class="cube"></div>
+      <div style="background: #4caf50;" class="cube"></div>
+      <div style="background: #2196f3;" class="cube"></div>
+      <div style="background: #ff3d00;" class="cube"></div>
+      <div style="background: #ffeb3b;" class="cube"></div>
+      <div style="background: #4caf50;" class="cube"></div>
+      <div style="background: #2196f3;" class="cube"></div>
+      <div style="background: #ffffff;" class="cube"></div>
+      <div style="background: #ff3d00;" class="cube"></div>
+    </div>
+  </div>
+</div>
+
+<h1 class="headingg">
+  DOWNLOADING FILES...
+</h1>
+
+      <div class="custom-loader"></div>
+      <p>(rotate your smartphone)</p>
+    </div>
+
+		<script type="module" src="./main.js"></script>
+	</body>
+</html>
